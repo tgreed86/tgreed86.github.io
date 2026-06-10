@@ -1,0 +1,36 @@
+---
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/research/', label: 'Research' },
+  { href: '/publications/', label: 'Publications' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/cv/', label: 'CV' },
+  { href: '/contact/', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+const normalize = (path: string) => (path === '/' ? '/' : path.replace(/\/$/, ''));
+---
+
+<header class="site-header">
+  <a class="site-mark" href="/" aria-label="Trevor Reed home">
+    <span class="mark-symbol" aria-hidden="true">TR</span>
+    <span class="mark-text">
+      <strong>Trevor Reed</strong>
+      <span>Physics · Scientific ML</span>
+    </span>
+  </a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    {
+      navItems.map((item) => {
+        const active = normalize(currentPath) === normalize(item.href);
+        return (
+          <a class:list={[{ active }, 'nav-link']} href={item.href} aria-current={active ? 'page' : undefined}>
+            {item.label}
+          </a>
+        );
+      })
+    }
+  </nav>
+</header>

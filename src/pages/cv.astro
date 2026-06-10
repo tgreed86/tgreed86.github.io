@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+
+const title = 'CV';
+const description = 'Curriculum vitae and professional background for Trevor Reed.';
+---
+
+<BaseLayout {title} {description}>
+  <div class="container narrow">
+    <PageHeader
+      eyebrow="CV"
+      title="Curriculum vitae."
+      description="This page is a placeholder for the updated public CV and a concise web version of professional experience."
+    />
+
+    <section class="timeline" aria-label="Professional background preview">
+      <article>
+        <span>2024–present</span>
+        <h2>Postdoctoral Associate</h2>
+        <p>Physics research, machine-learning applications, mentoring, and collaboration with Jefferson Lab data-science efforts.</p>
+      </article>
+      <article>
+        <span>2024</span>
+        <h2>Ph.D. in Physics</h2>
+        <p>Dissertation research on Λ(1405) photoproduction using CLAS g12 data.</p>
+      </article>
+      <article>
+        <span>2017–2020</span>
+        <h2>Teaching Assistant</h2>
+        <p>Introductory physics laboratory instruction, office hours, grading, and student support.</p>
+      </article>
+    </section>
+
+    <div class="notice-box">
+      <h2>Public CV file pending</h2>
+      <p>
+        The current CV will be revised before publication. Once approved, this page will include a
+        downloadable PDF and a streamlined web summary.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  authors: string;
+  venue: string;
+  note?: string;
+}
+
+const { title, authors, venue, note } = Astro.props;
+---
+
+<article class="publication-item">
+  <h3>{title}</h3>
+  <p class="authors">{authors}</p>
+  <p class="venue">{venue}</p>
+  {note && <p class="pub-note">{note}</p>}
+</article>

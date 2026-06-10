@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+
+const title = 'Publications';
+const description = 'Selected publications and collaboration papers by Trevor Reed.';
+---
+
+<BaseLayout {title} {description}>
+  <div class="container narrow">
+    <PageHeader
+      eyebrow="Publications"
+      title="Selected publications and collaboration papers."
+      description="This page uses temporary prototype entries. In the content phase, entries can be linked to DOI, arXiv, INSPIRE-HEP, and journal pages."
+    />
+
+    <section class="publication-group" aria-labelledby="lead-author-title">
+      <h2 id="lead-author-title">Lead author</h2>
+      <PublicationItem
+        title="Constituent Counting Rule and ω Photoproduction"
+        authors="Trevor Reed et al."
+        venue="Physical Review C 103, 065203 (2021)"
+        note="Prototype entry; DOI and collaboration metadata to be verified during content integration."
+      />
+    </section>
+
+    <section class="publication-group" aria-labelledby="selected-collab-title">
+      <h2 id="selected-collab-title">Selected collaboration papers</h2>
+      <PublicationItem
+        title="Improved Λp Elastic Scattering Cross Sections Between 0.9 and 2.0 GeV/c and Connections to the Neutron Star Equation of State"
+        authors="J. Rowley et al."
+        venue="Physical Review Letters 127, 272303 (2021)"
+      />
+      <PublicationItem
+        title="First Measurement of Timelike Compton Scattering"
+        authors="P. Chatagnon et al."
+        venue="Physical Review Letters 127, 262501 (2021)"
+      />
+      <PublicationItem
+        title="First CLAS12 Measurement of Deeply Virtual Compton Scattering Beam-Spin Asymmetries in the Extended Valence Region"
+        authors="G. Christiaens et al."
+        venue="Physical Review Letters 130, 211902 (2023)"
+      />
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ResearchCard from '../components/ResearchCard.astro';
+
+const title = 'Research';
+const description = 'Research areas for Trevor Reed in experimental nuclear physics and scientific machine learning.';
+---
+
+<BaseLayout {title} {description}>
+  <div class="container">
+    <PageHeader
+      eyebrow="Research"
+      title="Experimental physics, machine learning, and computational analysis."
+      description="A prototype structure for presenting research themes, selected projects, and technical contributions."
+    />
+
+    <section class="content-section">
+      <div class="card-grid two">
+        <ResearchCard
+          label="Program 01"
+          title="Experimental nuclear and hadronic physics"
+          description="Photoproduction measurements, CLAS and CLAS12 analyses, detector calibration, covariance modeling, and kinematic reconstruction."
+        />
+        <ResearchCard
+          label="Program 02"
+          title="Scientific machine learning"
+          description="Machine-learning methods for physics analyses, including autoencoders, variational models, graph neural networks, and physics-augmented neural solvers."
+        />
+        <ResearchCard
+          label="Program 03"
+          title="Simulation and reconstruction workflows"
+          description="Large-scale simulation, HPC job orchestration, reproducible analysis tools, and software infrastructure for experimental datasets."
+        />
+        <ResearchCard
+          label="Program 04"
+          title="Partial-wave and amplitude analysis"
+          description="Prototype space for describing model-driven analyses, learned latent representations, and amplitude-reconstruction workflows."
+        />
+      </div>
+    </section>
+  </div>
+</BaseLayout>

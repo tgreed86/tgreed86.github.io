@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+
+const title = 'Projects';
+const description = 'Selected software and research projects by Trevor Reed.';
+
+const projects = [
+  {
+    label: 'Scientific ML',
+    title: 'GNN-based PDE and CFD surrogates',
+    description: 'Prototype area for graph neural network work on Burgers, advection, vortex shedding, and shock-related simulation datasets.',
+  },
+  {
+    label: 'Amplitude analysis',
+    title: 'Autoencoder models for physics observables',
+    description: 'Prototype area for autoencoder and variational autoencoder workflows aimed at compressing and reconstructing reaction information.',
+  },
+  {
+    label: 'Experimental workflows',
+    title: 'CLAS and CLAS12 analysis infrastructure',
+    description: 'Prototype area for detector-alignment, kinematic-fitting, covariance-modeling, and high-throughput analysis tools.',
+  },
+];
+---
+
+<BaseLayout {title} {description}>
+  <div class="container">
+    <PageHeader
+      eyebrow="Projects"
+      title="Selected research software and technical projects."
+      description="This prototype uses project cards. Later, each card can link to a detailed project page, GitHub repository, paper, figure, or slide deck."
+    />
+
+    <section class="project-list" aria-label="Selected projects">
+      {
+        projects.map((project) => (
+          <article class="project-card">
+            <p class="card-label">{project.label}</p>
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <span class="project-status">Details to be added</span>
+          </article>
+        ))
+      }
+    </section>
+  </div>
+</BaseLayout>

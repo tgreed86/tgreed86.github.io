@@ -1,86 +1,77 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ResearchCard from '../components/ResearchCard.astro';
 
 const title = 'Trevor Reed';
 const description = 'Professional website of Trevor Reed, physicist and scientific machine learning researcher.';
 ---
 
 <BaseLayout {title} {description}>
-  <main>
-    <section class="shell" aria-labelledby="page-title">
-      <p class="eyebrow">Site foundation</p>
+  <section class="hero container" aria-labelledby="page-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Professional website prototype</p>
       <h1 id="page-title">Trevor Reed</h1>
-      <p class="intro">
-        Physicist and scientific machine learning researcher. The full professional website is
-        currently under development.
+      <p class="hero-lede">
+        Physicist working across experimental nuclear physics, scientific machine learning, and
+        computational methods for data-intensive physics analyses.
       </p>
-      <div class="status" role="status">
-        <span class="status-dot" aria-hidden="true"></span>
-        Astro and GitHub Pages foundation ready
+      <div class="hero-actions" aria-label="Primary actions">
+        <a class="button primary" href="/research/">View research</a>
+        <a class="button secondary" href="/publications/">Publications</a>
       </div>
-    </section>
-  </main>
+    </div>
+
+    <figure class="portrait-card">
+      <picture>
+        <source srcset="/images/trevor-reed-headshot.webp" type="image/webp" />
+        <img src="/images/trevor-reed-headshot.jpg" alt="Trevor Reed standing in a modern academic building" />
+      </picture>
+      <figcaption>
+        <span>Current focus</span>
+        Scientific machine learning for physics analysis and simulation workflows.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="container section-grid" aria-labelledby="focus-title">
+    <div class="section-heading">
+      <p class="eyebrow">Research profile</p>
+      <h2 id="focus-title">Physics-driven computation for complex experimental data.</h2>
+    </div>
+    <div class="card-grid three">
+      <ResearchCard
+        label="Hadronic physics"
+        title="Λ(1405) photoproduction"
+        description="Cross-section measurements, reaction reconstruction, and CLAS/Jefferson Lab data analysis workflows."
+      />
+      <ResearchCard
+        label="Scientific ML"
+        title="Neural methods for physics"
+        description="Autoencoders, variational models, and graph neural networks for simulation acceleration and physics inference."
+      />
+      <ResearchCard
+        label="Computing"
+        title="Analysis infrastructure"
+        description="Python, C++, Java, ROOT, TensorFlow, PyTorch, and HPC workflows for large-scale physics datasets."
+      />
+    </div>
+  </section>
+
+  <section class="container split-panel" aria-labelledby="site-status-title">
+    <div>
+      <p class="eyebrow">Prototype status</p>
+      <h2 id="site-status-title">Design shell ready for review.</h2>
+    </div>
+    <div>
+      <p>
+        This version establishes the visual system, navigation, page templates, and headshot treatment.
+        The next phase will refine the copy, publication metadata, project descriptions, and external links.
+      </p>
+      <ul class="check-list">
+        <li>Responsive academic-style layout</li>
+        <li>Dedicated pages for research, publications, projects, CV, and contact</li>
+        <li>Reusable components for cards and publication entries</li>
+      </ul>
+    </div>
+  </section>
 </BaseLayout>
-
-<style>
-  main {
-    display: grid;
-    min-height: 100vh;
-    place-items: center;
-    padding: 2rem;
-  }
-
-  .shell {
-    width: min(100%, 52rem);
-    padding: clamp(2rem, 6vw, 5rem);
-    border: 1px solid #dfe4e5;
-    border-radius: 0.75rem;
-    background: #ffffff;
-    box-shadow: 0 1.5rem 4rem rgb(28 45 52 / 8%);
-  }
-
-  .eyebrow {
-    margin: 0 0 1rem;
-    color: #52666f;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(3rem, 10vw, 6rem);
-    font-weight: 500;
-    letter-spacing: -0.055em;
-    line-height: 0.95;
-  }
-
-  .intro {
-    max-width: 43rem;
-    margin: 2rem 0 0;
-    color: #44545b;
-    font-size: clamp(1.05rem, 2vw, 1.3rem);
-    line-height: 1.65;
-  }
-
-  .status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.65rem;
-    margin-top: 2.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid #e8ebec;
-    color: #52666f;
-    font-size: 0.9rem;
-  }
-
-  .status-dot {
-    width: 0.65rem;
-    height: 0.65rem;
-    border-radius: 999px;
-    background: #2f765e;
-    box-shadow: 0 0 0 0.25rem rgb(47 118 94 / 12%);
-  }
-</style>
