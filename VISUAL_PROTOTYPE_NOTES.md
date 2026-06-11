@@ -1,22 +1,22 @@
-# Visual prototype notes
+# Website content notes
 
-This prototype establishes the look and structure of the professional website. It is intentionally not a final content pass.
+This site has been reframed around Trevor's current data science postdoctoral work and scientific machine learning focus.
 
 ## Included
 
 - Responsive header and footer
-- Homepage with headshot and research positioning
-- Research page
-- Publications page with representative prototype entries
-- Projects page
-- CV placeholder page
-- Contact placeholder page
+- Homepage with headshot and current SciML positioning
+- Research page focused on graph neural network surrogate modeling for CFD and simulation workflows
+- Publications page with selected prior experimental nuclear physics work and current SciML work in progress
+- Projects page with current GNN, simulation pipeline, and physics ML project framing
+- CV summary page
+- Contact page for professional links and job-search positioning
 - Reusable Astro components for headers, cards, and publication entries
 - Optimized headshot assets in `public/images/`
 
 ## Still pending
 
-- Final biography copy
+- Final biography copy after the public CV is approved
 - Public CV PDF approval
 - Full publication metadata with DOI/arXiv/INSPIRE links
 - Verified contact links

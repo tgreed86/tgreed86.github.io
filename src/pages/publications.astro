@@ -4,16 +4,28 @@ import PageHeader from '../components/PageHeader.astro';
 import PublicationItem from '../components/PublicationItem.astro';
 
 const title = 'Publications';
-const description = 'Selected publications and collaboration papers by Trevor Reed.';
+const description = 'Selected publications and research outputs by Trevor Reed.';
 ---
 
 <BaseLayout {title} {description}>
   <div class="container narrow">
     <PageHeader
       eyebrow="Publications"
-      title="Selected publications and collaboration papers."
-      description="This page uses temporary prototype entries. In the content phase, entries can be linked to DOI, arXiv, INSPIRE-HEP, and journal pages."
+      title="Selected publications and research outputs."
+      description="Peer-reviewed publications from my experimental nuclear physics training, alongside current scientific machine learning work in progress."
     />
+
+    <section class="publication-group" aria-labelledby="current-work-title">
+      <h2 id="current-work-title">Current scientific ML work</h2>
+      <article class="notice-box">
+        <h2>Graph neural network surrogate modeling for CFD</h2>
+        <p>
+          Current postdoctoral research focuses on training neural surrogate models on physics simulations
+          to reproduce CFD solver behavior at much lower computational cost. Public papers, preprints,
+          and technical artifacts will be linked here as they become available.
+        </p>
+      </article>
+    </section>
 
     <section class="publication-group" aria-labelledby="lead-author-title">
       <h2 id="lead-author-title">Lead author</h2>
@@ -21,7 +33,7 @@ const description = 'Selected publications and collaboration papers by Trevor Re
         title="Constituent Counting Rule and ω Photoproduction"
         authors="Trevor Reed et al."
         venue="Physical Review C 103, 065203 (2021)"
-        note="Prototype entry; DOI and collaboration metadata to be verified during content integration."
+        note="Representative lead-author publication from Ph.D. research in experimental hadronic physics."
       />
     </section>
 

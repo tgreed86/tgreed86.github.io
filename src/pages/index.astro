@@ -3,21 +3,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ResearchCard from '../components/ResearchCard.astro';
 
 const title = 'Trevor Reed';
-const description = 'Professional website of Trevor Reed, physicist and scientific machine learning researcher.';
+const description =
+  'Trevor Reed is a data science postdoc developing graph neural network surrogate models for CFD and physics simulation workflows.';
 ---
 
 <BaseLayout {title} {description}>
   <section class="hero container" aria-labelledby="page-title">
     <div class="hero-copy">
-      <p class="eyebrow">Professional website prototype</p>
+      <p class="eyebrow">Data Science Postdoc · Scientific Machine Learning</p>
       <h1 id="page-title">Trevor Reed</h1>
       <p class="hero-lede">
-        Physicist working across experimental nuclear physics, scientific machine learning, and
-        computational methods for data-intensive physics analyses.
+        I build graph neural network surrogate models for CFD and physics simulations, with the
+        goal of reproducing high-fidelity numerical results in a fraction of the runtime.
       </p>
       <div class="hero-actions" aria-label="Primary actions">
-        <a class="button primary" href="/research/">View research</a>
-        <a class="button secondary" href="/publications/">Publications</a>
+        <a class="button primary" href="/research/">Research focus</a>
+        <a class="button secondary" href="/projects/">Selected projects</a>
       </div>
     </div>
 
@@ -28,49 +29,50 @@ const description = 'Professional website of Trevor Reed, physicist and scientif
       </picture>
       <figcaption>
         <span>Current focus</span>
-        Scientific machine learning for physics analysis and simulation workflows.
+        Scientific machine learning for fast, simulation-trained models of complex physical systems.
       </figcaption>
     </figure>
   </section>
 
   <section class="container section-grid" aria-labelledby="focus-title">
     <div class="section-heading">
-      <p class="eyebrow">Research profile</p>
-      <h2 id="focus-title">Physics-driven computation for complex experimental data.</h2>
+      <p class="eyebrow">Research Profile</p>
+      <h2 id="focus-title">Scientific ML for physics simulation and accelerated modeling.</h2>
     </div>
     <div class="card-grid three">
       <ResearchCard
-        label="Hadronic physics"
-        title="Λ(1405) photoproduction"
-        description="Cross-section measurements, reaction reconstruction, and CLAS/Jefferson Lab data analysis workflows."
+        label="Current Work"
+        title="GNN surrogates for CFD"
+        description="Training mesh- and graph-based neural models on simulation data to approximate fluid dynamics fields, rollouts, and derived observables."
       />
       <ResearchCard
-        label="Scientific ML"
-        title="Neural methods for physics"
-        description="Autoencoders, variational models, and graph neural networks for simulation acceleration and physics inference."
+        label="Methods"
+        title="Physics-aware ML pipelines"
+        description="Simulation dataset generation, graph construction, model validation, uncertainty checks, and HPC workflows for scientific machine learning."
       />
       <ResearchCard
-        label="Computing"
-        title="Analysis infrastructure"
-        description="Python, C++, Java, ROOT, TensorFlow, PyTorch, and HPC workflows for large-scale physics datasets."
+        label="Foundation"
+        title="Domain-trained scientist"
+        description="Ph.D.-level training in experimental nuclear physics, large-scale data analysis, detector workflows, and computational research software."
       />
     </div>
   </section>
 
-  <section class="container split-panel" aria-labelledby="site-status-title">
+  <section class="container split-panel" aria-labelledby="career-focus-title">
     <div>
-      <p class="eyebrow">Prototype status</p>
-      <h2 id="site-status-title">Design shell ready for review.</h2>
+      <p class="eyebrow">Career Focus</p>
+      <h2 id="career-focus-title">Targeting scientific machine learning and data science roles.</h2>
     </div>
     <div>
       <p>
-        This version establishes the visual system, navigation, page templates, and headshot treatment.
-        The next phase will refine the copy, publication metadata, project descriptions, and external links.
+        I am especially interested in positions where machine learning, numerical simulation,
+        and domain science meet: industry research teams, national labs, and applied data science
+        groups building fast models for physical systems.
       </p>
       <ul class="check-list">
-        <li>Responsive academic-style layout</li>
-        <li>Dedicated pages for research, publications, projects, CV, and contact</li>
-        <li>Reusable components for cards and publication entries</li>
+        <li>Graph neural networks and neural surrogate models for PDE and CFD problems</li>
+        <li>Simulation-trained models that reduce the cost of traditional numerical workflows</li>
+        <li>Scientific Python, PyTorch, C++, ROOT, and HPC-scale data processing</li>
       </ul>
     </div>
   </section>

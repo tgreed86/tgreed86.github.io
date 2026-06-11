@@ -10,9 +10,9 @@ Source code for the professional website hosted at `https://tgreed86.github.io`.
 
 ## Current status
 
-The repository and deployment foundation are established. This branch now contains the first visual prototype: navigation, page templates, homepage layout, responsive styling, and optimized headshot assets.
+The repository and deployment foundation are established. The current site emphasizes Trevor's scientific machine learning and data science work, especially graph neural network surrogate models for CFD and physics simulation workflows.
 
-Full content integration is still pending. Publications, CV details, external profiles, and contact information should be verified before final publication.
+Remaining content work includes a finalized public CV PDF, verified external profile links, and publication metadata links such as DOI, arXiv, INSPIRE-HEP, or Google Scholar.
 
 ## Local development
 

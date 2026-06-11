@@ -3,22 +3,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 
 const title = 'CV';
-const description = 'Curriculum vitae and professional background for Trevor Reed.';
+const description = 'Professional background for Trevor Reed in data science, scientific machine learning, and physics.';
 ---
 
 <BaseLayout {title} {description}>
   <div class="container narrow">
     <PageHeader
       eyebrow="CV"
-      title="Curriculum vitae."
-      description="This page is a placeholder for the updated public CV and a concise web version of professional experience."
+      title="Scientific machine learning, data science, and physics."
+      description="A concise web summary of my current postdoctoral focus, Ph.D. training, and technical background. A downloadable CV will be added once the public version is finalized."
     />
 
     <section class="timeline" aria-label="Professional background preview">
       <article>
-        <span>2024–present</span>
-        <h2>Postdoctoral Associate</h2>
-        <p>Physics research, machine-learning applications, mentoring, and collaboration with Jefferson Lab data-science efforts.</p>
+        <span>Current</span>
+        <h2>Data Science Postdoctoral Researcher</h2>
+        <p>Developing graph neural network surrogate models for CFD and physics simulation workflows, with emphasis on fast inference, robust evaluation, and reproducible scientific ML pipelines.</p>
+      </article>
+      <article>
+        <span>Prior postdoctoral work</span>
+        <h2>Experimental Nuclear Physics Researcher</h2>
+        <p>Applied machine learning and computational analysis methods to nuclear physics problems, building on collaboration-scale detector and simulation experience.</p>
       </article>
       <article>
         <span>2024</span>
@@ -33,10 +38,11 @@ const description = 'Curriculum vitae and professional background for Trevor Ree
     </section>
 
     <div class="notice-box">
-      <h2>Public CV file pending</h2>
+      <h2>Core technical strengths</h2>
       <p>
-        The current CV will be revised before publication. Once approved, this page will include a
-        downloadable PDF and a streamlined web summary.
+        Scientific machine learning, graph neural networks, CFD/PDE surrogate modeling, simulation
+        data pipelines, Python, PyTorch, C++, ROOT, high-performance computing, and physics-driven
+        model evaluation.
       </p>
     </div>
   </div>

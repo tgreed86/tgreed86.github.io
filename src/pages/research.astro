@@ -4,39 +4,56 @@ import PageHeader from '../components/PageHeader.astro';
 import ResearchCard from '../components/ResearchCard.astro';
 
 const title = 'Research';
-const description = 'Research areas for Trevor Reed in experimental nuclear physics and scientific machine learning.';
+const description =
+  'Research areas for Trevor Reed in graph neural network surrogate modeling, CFD, and scientific machine learning for physics simulation.';
 ---
 
 <BaseLayout {title} {description}>
   <div class="container">
     <PageHeader
       eyebrow="Research"
-      title="Experimental physics, machine learning, and computational analysis."
-      description="A prototype structure for presenting research themes, selected projects, and technical contributions."
+      title="Scientific machine learning for fast physics simulation."
+      description="My current work focuses on graph neural networks trained on CFD and PDE simulation data, aiming to reproduce the behavior of traditional numerical solvers with substantially lower evaluation cost."
     />
 
     <section class="content-section">
       <div class="card-grid two">
         <ResearchCard
           label="Program 01"
-          title="Experimental nuclear and hadronic physics"
-          description="Photoproduction measurements, CLAS and CLAS12 analyses, detector calibration, covariance modeling, and kinematic reconstruction."
+          title="GNN surrogate models for CFD"
+          description="Mesh-aware and graph-based models for learning fluid dynamics from simulation trajectories, with attention to rollout quality, boundary behavior, and physically meaningful error metrics."
         />
         <ResearchCard
           label="Program 02"
-          title="Scientific machine learning"
-          description="Machine-learning methods for physics analyses, including autoencoders, variational models, graph neural networks, and physics-augmented neural solvers."
+          title="Simulation-to-model workflows"
+          description="Pipelines for turning numerical simulation output into training-ready datasets, including feature normalization, graph construction, batching, checkpointing, and reproducible evaluation."
         />
         <ResearchCard
           label="Program 03"
-          title="Simulation and reconstruction workflows"
-          description="Large-scale simulation, HPC job orchestration, reproducible analysis tools, and software infrastructure for experimental datasets."
+          title="Physics-informed evaluation"
+          description="Model assessment that goes beyond pointwise loss: conservation behavior, stability over repeated inference, extrapolation limits, and comparison to trusted numerical baselines."
         />
         <ResearchCard
           label="Program 04"
-          title="Partial-wave and amplitude analysis"
-          description="Prototype space for describing model-driven analyses, learned latent representations, and amplitude-reconstruction workflows."
+          title="Experimental physics foundation"
+          description="Prior work in hadronic and nuclear physics provides deep experience with noisy scientific data, detector effects, covariance modeling, and computational analysis at collaboration scale."
         />
+      </div>
+    </section>
+
+    <section class="split-panel" aria-labelledby="research-arc-title">
+      <div>
+        <p class="eyebrow">Research Arc</p>
+        <h2 id="research-arc-title">From experimental physics to scientific machine learning.</h2>
+      </div>
+      <div>
+        <p>
+          My Ph.D. training centered on experimental nuclear physics, where careful reconstruction,
+          uncertainty control, and collaboration-scale software were essential. My current postdoctoral
+          work builds on that foundation by applying data science and neural modeling to simulation-heavy
+          physics problems, especially CFD systems where faster surrogate models can make design,
+          inference, and parameter studies more practical.
+        </p>
       </div>
     </section>
   </div>

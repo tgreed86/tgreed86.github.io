@@ -7,19 +7,32 @@ const description = 'Selected software and research projects by Trevor Reed.';
 
 const projects = [
   {
+    label: 'Current Focus',
+    title: 'GNN-based CFD surrogate modeling',
+    description:
+      'Training graph neural networks on physics simulation data to reproduce fluid dynamics behavior at inference speeds far below traditional numerical solvers.',
+    status: 'Active research',
+  },
+  {
     label: 'Scientific ML',
-    title: 'GNN-based PDE and CFD surrogates',
-    description: 'Prototype area for graph neural network work on Burgers, advection, vortex shedding, and shock-related simulation datasets.',
+    title: 'Simulation dataset pipelines',
+    description:
+      'Converting CFD and PDE solver output into graph-structured machine learning datasets with reproducible preprocessing, batching, validation, and rollout diagnostics.',
+    status: 'Active research',
   },
   {
-    label: 'Amplitude analysis',
-    title: 'Autoencoder models for physics observables',
-    description: 'Prototype area for autoencoder and variational autoencoder workflows aimed at compressing and reconstructing reaction information.',
+    label: 'Modeling',
+    title: 'Neural methods for physics observables',
+    description:
+      'Applying autoencoder, variational, and graph-based architectures to compress, reconstruct, and infer structure in high-dimensional scientific data.',
+    status: 'Method development',
   },
   {
-    label: 'Experimental workflows',
+    label: 'Prior Work',
     title: 'CLAS and CLAS12 analysis infrastructure',
-    description: 'Prototype area for detector-alignment, kinematic-fitting, covariance-modeling, and high-throughput analysis tools.',
+    description:
+      'Detector calibration, kinematic reconstruction, covariance modeling, and high-throughput analysis tools from experimental nuclear physics research.',
+    status: 'Domain foundation',
   },
 ];
 ---
@@ -28,8 +41,8 @@ const projects = [
   <div class="container">
     <PageHeader
       eyebrow="Projects"
-      title="Selected research software and technical projects."
-      description="This prototype uses project cards. Later, each card can link to a detailed project page, GitHub repository, paper, figure, or slide deck."
+      title="Selected scientific machine learning and research software."
+      description="A focused view of current GNN and simulation-acceleration work, with prior experimental physics software included as evidence of domain depth and production research habits."
     />
 
     <section class="project-list" aria-label="Selected projects">
@@ -39,7 +52,7 @@ const projects = [
             <p class="card-label">{project.label}</p>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <span class="project-status">Details to be added</span>
+            <span class="project-status">{project.status}</span>
           </article>
         ))
       }
