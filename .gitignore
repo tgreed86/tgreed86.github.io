@@ -3,6 +3,7 @@
 
 # Generated files
 .astro/
+misc/
 
 # Dependencies
 node_modules/
